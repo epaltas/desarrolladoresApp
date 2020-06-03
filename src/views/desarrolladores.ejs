@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/_header') %>
+</head>
+
+<body>
+    <%- include('partials/_navigation') %>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <td>n°</td>
+                            <td><strong>Nombres</strong></td>
+                            <td><strong>Link GitHub</strong></td>
+                            <td><strong>Tecnologias</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (data) { %>
+                        <% for(var i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td><%= (i + 1) %></td>
+                            <td><%= data[i].nombres_completos %></td>
+                            <td><%= data[i].link_github %></td>
+                            <td><%= data[i].tecnologias_conocidas %></td>
+                            <td>
+                                <a href="/developers/<%= data[i].id %>" class="btn btn-info">Edit</a>
+                                <a href="/developers/<%= data[i].id %>" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        <% } %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+</body>
+
+</html>
