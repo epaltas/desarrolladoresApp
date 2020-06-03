@@ -9,7 +9,7 @@
     <%- include('partials/_navigation') %>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-7">
+            <div class="table-responsive">
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
@@ -17,6 +17,7 @@
                             <td><strong>Nombres</strong></td>
                             <td><strong>Link GitHub</strong></td>
                             <td><strong>Tecnologias</strong></td>
+                            <td><strong>Acciones</strong></td>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,7 +28,7 @@
                             <td><%= data[i].nombres_completos %></td>
                             <td><%= data[i].link_github %></td>
                             <td><%= data[i].tecnologias_conocidas %></td>
-                            <td>
+                            <td class="size">
                                 <a href="/developers/<%= data[i].id %>" class="btn btn-info">Edit</a>
                                 <a href="/delete/<%= data[i].id %>" class="btn btn-danger">Delete</a>
                             </td>
