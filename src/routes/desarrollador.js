@@ -8,6 +8,6 @@ router.get('/developers', desarrolladorController.new);
 router.post('/developers', desarrolladorController.save);
 router.get('/developers/:id', desarrolladorController.edit);
 router.post('/developers/:id', desarrolladorController.update);
-router.get('/developers/:id', desarrolladorController.delete);
+router.get('/delete/:id', desarrolladorController.delete);
 
 module.exports = router;
